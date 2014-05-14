@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FEBViewController : UIViewController
+@interface FEBViewController : UIViewController <UIPickerViewDelegate>
+- (IBAction)pickerValueWasChanged:(id)sender;
+- (IBAction)pickerDragInside:(id)sender;
 
 @end

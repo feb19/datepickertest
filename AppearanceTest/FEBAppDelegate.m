@@ -8,11 +8,50 @@
 
 #import "FEBAppDelegate.h"
 
+//@implementation UIFont (SytemFontOverride)
+//
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
+//
+//+ (UIFont *)boldSystemFontOfSize:(CGFloat)fontSize {
+//    return [UIFont fontWithName:@"Geogia" size:fontSize];
+//}
+//
+//+ (UIFont *)systemFontOfSize:(CGFloat)fontSize {
+//    return [UIFont fontWithName:@"Geogia" size:fontSize];
+//}
+//
+//#pragma clang diagnostic pop
+//
+//@end
+
 @implementation FEBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    UIDatePicker *picker = [UIDatePicker appearance];
+    picker.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.3];
+    
+    /*
+    UIView *view;
+    view = [UIView appearanceWhenContainedIn:[UITableView class], [UIDatePicker class], nil];
+    view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    */
+    
+    /*
+    UILabel *label = [UILabel appearanceWhenContainedIn:[UITableView class], [UIDatePicker class], nil];
+    label.font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    label.textColor = [UIColor blueColor];
+    */
+//    UIFont *font = [UIFont fontWithName:@"Geogia" size:20];
+//    NSDictionary *stringAttributes = @{ NSForegroundColorAttributeName : [UIColor blueColor],
+//                                        NSFontAttributeName : [UIFont systemFontOfSize:14.0f] };
+//    NSAttributedString *string = [[NSAttributedString alloc] initWithString:@"0123"
+//                                                                 attributes:stringAttributes];
+//
+//    [[UILabel appearanceWhenContainedIn:[UIPickerView class], nil] setAttributedText:string];
+    
     return YES;
 }
 							

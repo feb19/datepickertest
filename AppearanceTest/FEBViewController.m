@@ -26,4 +26,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view;
+{
+    
+    
+    return view;
+}
+
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+//    NSString *title = @"sample title";
+//    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+//    
+//    
+    NSDictionary *stringAttributes = @{ NSForegroundColorAttributeName : [UIColor blueColor],
+                                        NSFontAttributeName : [UIFont systemFontOfSize:14.0f] };
+    NSAttributedString *string = [[NSAttributedString alloc] initWithString:@"0123"
+                                                                 attributes:stringAttributes];
+    
+    
+    return string;
+    
+}
+
+- (IBAction)pickerValueWasChanged:(id)sender {
+    
+}
+
+- (IBAction)pickerDragInside:(id)sender {
+    
+    NSDictionary *stringAttributes = @{ NSForegroundColorAttributeName : [UIColor blueColor],
+                                        NSFontAttributeName : [UIFont systemFontOfSize:14.0f] };
+    NSAttributedString *string = [[NSAttributedString alloc] initWithString:@"0123"
+                                                                 attributes:stringAttributes];
+    
+    [[UILabel appearanceWhenContainedIn:[UIPickerView class], nil] setAttributedText:string];
+    NSLog(@"changed");
+    
+    [self.view updateConstraintsIfNeeded];
+}
 @end
