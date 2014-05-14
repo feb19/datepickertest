@@ -8,23 +8,6 @@
 
 #import "FEBAppDelegate.h"
 
-//@implementation UIFont (SytemFontOverride)
-//
-//#pragma clang diagnostic push
-//#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
-//
-//+ (UIFont *)boldSystemFontOfSize:(CGFloat)fontSize {
-//    return [UIFont fontWithName:@"Geogia" size:fontSize];
-//}
-//
-//+ (UIFont *)systemFontOfSize:(CGFloat)fontSize {
-//    return [UIFont fontWithName:@"Geogia" size:fontSize];
-//}
-//
-//#pragma clang diagnostic pop
-//
-//@end
-
 @implementation FEBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

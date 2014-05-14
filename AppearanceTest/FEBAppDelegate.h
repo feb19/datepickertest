@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//@interface UIFont (SytemFontOverride)
-//@end
 
 @interface FEBAppDelegate : UIResponder <UIApplicationDelegate>
 
